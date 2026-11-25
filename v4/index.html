@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Silow — strategic investor briefing</title>
+<style>
+@font-face{font-family:"Suisse Intl";src:url("./fonts/SuisseIntl-Regular.otf");font-weight:400}
+@font-face{font-family:"Suisse Intl";src:url("./fonts/SuisseIntl-Medium.otf");font-weight:500}
+@font-face{font-family:"Suisse Intl Mono";src:url("./fonts/SuisseIntlMono-Regular.otf")}
+:root{--ink:#0E0E0C;--ink2:#2C2B27;--mute:#6B6A66;--faint:#9A9A95;--p2:#F5F5F3;--ac:#3B5BFF;--line:#E8E8E6;--l2:#DADAD7;--mono:"Suisse Intl Mono",ui-monospace,monospace;--ease:cubic-bezier(.16,1,.3,1);--hl:linear-gradient(180deg,#F1F4FF,#fff 80%)}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{font-family:"Suisse Intl",-apple-system,"Helvetica Neue",sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+main{height:100vh;overflow-y:auto;overflow-x:hidden;scroll-snap-type:y mandatory}
+section{height:100vh;min-height:560px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9vh 56px 6vh;position:relative;overflow:hidden;overflow-x:clip;width:100%;max-width:100%}
+main{overflow-x:clip}section>*{max-width:100%}.gap,.iso,.desk,.sl,.gk,.tl,.dep,.ev{overflow:clip}
+.band{width:100%!important;align-self:stretch;margin-left:-56px;margin-right:-56px;width:calc(100% + 112px)!important;max-width:none!important;overflow:clip}
+.eb{display:inline-flex;align-items:center;gap:10px;font:13px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin-bottom:2.4vh}
+.eb::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ac)}
+h1,h2{margin:0;font-weight:400;letter-spacing:-.035em;line-height:1.03;text-wrap:balance}
+h1{font-size:clamp(46px,min(5.6vw,10vh),104px)}h2{font-size:clamp(32px,min(4.2vw,7.2vh),76px)}
+em{font-style:normal;color:var(--ac)}
+.lede{margin:3vh auto 0;max-width:900px;font-size:clamp(18px,1.6vw,26px);line-height:1.45;color:var(--mute);text-wrap:balance}.lede b{color:var(--ink);font-weight:500}
+.lbl{margin-top:3.4vh;font:12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.foot{margin-top:3vh;font-size:clamp(15px,1.2vw,20px);color:var(--mute);max-width:1100px}.foot b{color:var(--ink);font-weight:500}
+.top{position:fixed;inset:0 0 auto;z-index:10;display:flex;justify-content:space-between;padding:22px 34px;pointer-events:none}
+.top img{width:26px;height:26px}.top span{font:12.5px var(--mono);letter-spacing:.14em;color:var(--faint);text-transform:uppercase}
+.top.dk img{filter:invert(1)}.top.dk span,.dk~#counter{color:rgba(255,255,255,.5)}
+#counter{position:fixed;right:34px;bottom:24px;z-index:10;font:12.5px var(--mono);letter-spacing:.16em;color:var(--faint)}
+.anim .rise{transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.anim section:not(.in) .rise{opacity:0;transform:translateY(16px)}
+.d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.3s}
+.tk{position:relative;background:var(--hl);box-shadow:inset 0 0 0 1px rgba(59,91,255,.28)}
+.tk::before,.tk::after{content:"";position:absolute;width:10px;height:10px;border:0 solid var(--ac);top:0;left:0;border-width:2px 0 0 2px}
+.tk::after{left:auto;top:auto;right:0;bottom:0;border-width:0 2px 2px 0}
+/* 01 */
+.band{width:100vw;height:clamp(130px,22vh,250px);margin-bottom:4vh}.band canvas{width:100%;height:100%;display:block}
+/* 02 gap */
+.gap{width:min(1200px,92vw);margin-top:4vh}.gap svg{width:100%;display:block;overflow:visible}
+.gap text{font-family:"Suisse Intl",sans-serif}.gap .m{font-family:"Suisse Intl Mono",monospace;letter-spacing:2px}
+.anim section:not(.in) .draw{stroke-dashoffset:1600}.draw{stroke-dasharray:1600;transition:stroke-dashoffset 2.6s var(--ease) .4s}
+.anim section:not(.in) .pop{opacity:0}.pop{transition:opacity .6s 1.6s}
+/* 03 dark stack */
+.dark{background:#111214;color:#F2F2F0}.dark em{color:#8EA4FF}
+.stack{margin-top:3vh;flex:1;min-height:0;width:min(1240px,94vw);display:grid;grid-template-columns:300px 1fr;align-items:center;text-align:left}
+.stack ol{list-style:none;margin:0;padding:0;display:grid;gap:5vh}
+.stack li{border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:12px}
+.stack li i{font:12px var(--mono);color:#8EA4FF;font-style:normal;letter-spacing:.14em}
+.stack li b{display:block;font-size:clamp(20px,1.7vw,26px);font-weight:500;margin:4px 0}
+.stack li span{font-size:15px;color:rgba(255,255,255,.6)}
+.iso{position:relative;height:min(62vh,560px);perspective:1800px}
+.pl{position:absolute;left:12%;width:72%;height:44%;border-radius:10px;transform:rotateX(58deg) rotateZ(-38deg);border:1px solid rgba(142,164,255,.35);background:linear-gradient(135deg,#1F2130,#141519);box-shadow:0 30px 60px rgba(0,0,0,.6);display:grid;gap:5%;padding:5%}
+.pl:nth-child(1){top:-4%;grid-template-columns:repeat(3,1fr);box-shadow:0 20px 70px rgba(59,91,255,.25)}
+.pl:nth-child(2){top:24%;grid-template-columns:repeat(8,1fr)}.pl:nth-child(3){top:52%;grid-template-columns:1fr 1fr}
+.w{border-radius:4px;background:#25262C;border:1px solid rgba(255,255,255,.1);position:relative}
+.w span{position:absolute;left:8%;bottom:10%;font:9px var(--mono);letter-spacing:.08em;color:#fff;padding:2px 6px;border-radius:3px}
+.t{border-radius:3px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.t.on{background:var(--ac);border-color:#B4C2FF;box-shadow:0 0 14px #3B5BFF;animation:pulse 3.2s infinite}
+.t.on:nth-child(3n){animation-delay:1s}.t.on:nth-child(4n){animation-delay:2s}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.o{border-radius:4px;background:#fff center/cover;opacity:.85}
+.ok{position:absolute;font:11px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:4px;background:rgba(18,20,32,.94);border:1px solid rgba(142,164,255,.45);color:#E9ECFF;white-space:nowrap}
+.dark .note{margin-top:2vh;font:11px var(--mono);letter-spacing:.12em;color:rgba(255,255,255,.4);text-transform:uppercase}
+/* 04 slices */
+.sl{margin-top:2vh;width:min(1280px,94vw);display:grid;grid-template-columns:250px repeat(9,1fr);gap:8px;text-align:left}
+.sl .r{align-self:center;padding-right:10px}.sl .r b{display:block;font-size:clamp(16px,1.3vw,21px);font-weight:500}.sl .r span{font-size:13.5px;color:var(--mute);line-height:1.3}
+.c{min-height:min(11vh,88px);border-radius:10px;padding:8px 9px;font-size:clamp(11.5px,.9vw,14px);line-height:1.25;display:flex;flex-direction:column;justify-content:space-between;background:var(--p2);color:#C4C4BF}
+.c small{font:9.5px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.c.s{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--l2)}.c.v{background:#fff;color:var(--mute);box-shadow:inset 0 0 0 1px var(--l2);border:1px dashed var(--faint)}
+.c.y{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ac)}.c.y small{color:var(--ac)}
+.c.y.k{background:var(--ac);color:#fff}.c.y.k small{color:#fff}
+.anim section:not(.in) .c.y{opacity:.15}.c.y{transition:opacity .5s}
+.sl .y:nth-of-type(n){transition-delay:calc(var(--i)*.12s + .4s)}
+.row3{grid-column:1/-1;margin:-6px -10px;padding:6px 10px;display:contents}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:3vh}
+.pills span{padding:8px 16px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--l2);font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+/* 05 windows */
+.desk{margin-top:2vh;width:min(1360px,96vw);display:grid;grid-template-columns:repeat(3,1fr);text-align:left}
+.col{padding:14px 18px 16px;border-left:1px solid var(--l2)}.col:first-child{border-left:0}.col.tk{border-left-color:transparent}
+.wl{display:flex;align-items:center;gap:10px;margin-bottom:10px;font:12px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.wl i{font-style:normal;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-size:11px}
+.scr{border-radius:14px;padding:clamp(10px,2vh,22px) clamp(10px,1.2vw,20px) 0;background:#dfe8f6 url("./assets/win-wallpaper.jpg") center/cover;box-shadow:0 30px 70px -34px rgba(14,14,12,.45);overflow:hidden}
+.win{border-radius:9px 9px 0 0;background:rgba(246,247,250,.9);border:1px solid rgba(255,255,255,.7);font-family:"Segoe UI","Suisse Intl",sans-serif}
+.wt{height:32px;display:flex;align-items:center;gap:9px;padding:0 12px;font-size:12px;color:#333}
+.wt i{width:16px;height:16px;border-radius:4px;color:#fff;font:600 9.5px sans-serif;display:grid;place-items:center}
+.wb{margin:0 6px;border-radius:6px 6px 0 0;background:#fff;padding:clamp(10px,1.8vh,18px) 16px clamp(10px,2vh,20px)}
+.wb h4{margin:0 0 8px;font-size:clamp(13.5px,1vw,16px);font-weight:600;display:flex;justify-content:space-between}.wb h4 small{font-weight:400;color:#777;font-size:.8em}
+.kr{display:flex;justify-content:space-between;gap:10px;padding:clamp(5px,.95vh,9px) 0;border-bottom:1px solid #eee;font-size:clamp(12px,.9vw,14.5px)}
+.tg{font:10px var(--mono);letter-spacing:.06em;padding:2px 7px;border-radius:4px;background:#E7ECFF;color:var(--ac);white-space:nowrap;align-self:center}
+.tg.x{background:#FDECEA;color:#C0392B}.tg.g{background:#E8F5EC;color:#1D7A45}.tg.n{background:var(--ink);color:#fff}
+.out{margin-top:10px;padding:9px 11px;border-radius:7px;font-size:clamp(12px,.9vw,14px);line-height:1.35}
+.out.a{background:var(--ac);color:#fff}.out.p{background:var(--p2);color:var(--ink)}
+.out small{display:block;font:9.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.75;margin-bottom:2px}
+/* 06 evidence */
+.ev{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(30px,4vw,70px);align-items:center;width:min(1380px,96vw);text-align:left}
+.ev h2{font-size:clamp(30px,min(3.4vw,6.4vh),62px)}
+.ev ul{list-style:none;margin:4vh 0 0;padding:0}
+.ev li{padding:clamp(10px,1.8vh,16px) 0;border-top:1px solid var(--l2);display:grid;grid-template-columns:120px 1fr;gap:16px;font-size:clamp(15px,1.2vw,20px);line-height:1.35;color:var(--ink2)}
+.ev li i{font:11.5px var(--mono);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);padding-top:4px}
+.ev li.no i{color:var(--faint)}.ev li.no{color:var(--mute)}
+.shot{position:relative;height:min(64vh,600px);aspect-ratio:3/4;max-width:100%;border-radius:14px;background:#F4F5F7 url("./assets/views/board.jpg") 48% 74%/250% auto no-repeat;box-shadow:0 0 0 1px rgba(14,14,12,.06),0 40px 90px -40px rgba(14,14,12,.35)}
+.badge{position:absolute;left:14px;top:14px;padding:6px 11px;border-radius:999px;background:var(--ink);color:#fff;font:11px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+/* 07 cards */
+.gk{margin-top:14px;width:min(1240px,92vw);display:grid;grid-template-columns:repeat(3,1fr);text-align:left;height:min(46vh,410px)}
+.gk>div{display:flex;flex-direction:column;padding:24px;border-left:1px solid var(--l2)}.gk>div:first-child{border-left:0}.gk .tk+div{border-left-color:transparent}
+.gk b{font-size:clamp(19px,1.5vw,25px);font-weight:500;letter-spacing:-.02em}.gk p{margin:10px 0 0;font-size:clamp(14px,1.08vw,17px);line-height:1.45;color:var(--mute)}
+.gk svg{flex:1;min-height:0;width:100%;margin:12px 0;fill:none;stroke:#B9B9B4;stroke-width:1.2;stroke-linecap:round}.gk svg .a{stroke:var(--ac)}
+.pill{align-self:center;padding:7px 16px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--l2);font:11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;background:#fff}
+.pill.on{background:var(--ac);color:#fff;box-shadow:none}
+/* 08 timeline */
+.tl{margin-top:2.5vh;width:min(1200px,92vw);display:grid;grid-template-columns:190px repeat(4,1fr);gap:12px 8px;text-align:left}
+.tl .hd{padding-bottom:10px;font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ac);border-bottom:1.5px solid var(--ac);text-align:center}
+.tl .lb{align-self:center;font-size:clamp(17px,1.4vw,22px);font-weight:500}.tl .lb small{display:block;font:10.5px var(--mono);letter-spacing:.1em;color:var(--mute);text-transform:uppercase;margin-top:4px}
+.bar{min-height:clamp(46px,7vh,62px);border-radius:12px;padding:10px 16px;display:flex;align-items:center;font-size:clamp(14px,1.15vw,18px);font-weight:500}
+.bar.w{background:#fff;box-shadow:inset 0 0 0 1.5px var(--ac)}.bar.g{background:var(--p2);color:var(--ink2)}.bar.a{background:var(--ac);color:#fff}.bar.k{background:var(--ink);color:#fff}
+/* 09 */
+.dep{margin-top:6vh;width:min(1160px,92vw);display:grid;grid-template-columns:1fr 1fr;text-align:left}
+.dep>div{padding:4px clamp(24px,3.2vw,56px)}.dep>div+div{border-left:1px solid var(--l2)}
+.dep i{font:13px var(--mono);font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--ac)}
+.dep b{display:block;margin-top:14px;font-size:clamp(26px,2.4vw,40px);font-weight:500;letter-spacing:-.025em;line-height:1.1}
+.dep p{margin:14px 0 0;font-size:clamp(16px,1.3vw,21px);line-height:1.5;color:var(--mute)}
+.next{margin-top:6vh;display:inline-flex;gap:12px;padding:15px 30px;border-radius:999px;background:var(--ink);color:#fff;font-size:clamp(16px,1.3vw,21px);font-weight:500}.next span{opacity:.55;font-weight:400}
+.site{margin-top:3vh;font:14px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+@media(max-width:900px){
+main{scroll-snap-type:y proximity}.band{margin-left:-18px;margin-right:-18px;width:calc(100% + 36px)!important}section{height:auto;min-height:100vh;padding:12vh 18px 8vh}
+.eb{font-size:11px;letter-spacing:.1em}.top{padding:18px}#counter{right:18px}
+.stack{grid-template-columns:1fr;gap:4vh}.iso{height:330px;order:-1}.ok{display:none}
+.sl{grid-template-columns:repeat(3,1fr)}.sl .r{grid-column:1/-1;margin-top:10px}
+.desk,.gk,.dep,.ev{grid-template-columns:1fr;height:auto}.col,.gk>div{border-left:0!important;border-top:1px solid var(--l2)}
+.dep>div+div{border-left:0;border-top:1px solid var(--l2);margin-top:24px;padding-top:24px}
+.shot{height:auto;width:100%}.gk svg{height:90px;flex:none}
+.tl{grid-template-columns:1fr}.tl .hd{display:none}.tl>*{grid-column:auto!important}.bar::before{content:attr(data-p);font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-right:10px}
+.next{flex-wrap:wrap;justify-content:center;padding:14px 20px}.gap text{font-size:26px}.gap .tag{display:none}
+}
+</style></head><body>
+<div class="top" id="topbar"><img src="./assets/logo-upd.svg" alt="Silow"><span>silow.ai · strategic briefing</span></div>
+<div id="counter">01</div>
+<main id="deck">
+
+<section class="in">
+<div class="band rise" aria-hidden="true"><canvas id="stream-canvas"></canvas></div>
+<div class="eb rise d1">Silow · strategic investor briefing</div>
+<h1 class="rise d2">See how work<br><em>actually gets done.</em></h1>
+<p class="lede rise d3">Silow understands how work happens across a company’s apps, and turns it into <b>maps, documentation and automation opportunities that people validate.</b></p>
+</section>
+
+<section>
+<div class="eb rise">The problem</div>
+<h2 class="rise d1">The process on paper<br><em>is not how the work runs.</em></h2>
+<p class="lede rise d1" style="font-size:clamp(16px,1.3vw,21px);margin-top:2vh">Automation is scoped from interviews and documents. The real work moves between apps, through manual steps, handoffs and exceptions.</p>
+<div class="gap rise d2"><svg viewBox="0 0 1200 380" role="img" aria-label="A four-step documented process above a real path that weaves across four apps with manual steps, a handoff and an exception">
+<text class="m" x="0" y="44" font-size="12" fill="#9A9A95">ON PAPER</text>
+<path d="M300 40H1160" stroke="#DADAD7" stroke-width="2"/>
+<g fill="#fff" stroke="#0E0E0C" stroke-width="1.5"><circle cx="300" cy="40" r="7"/><circle cx="586" cy="40" r="7"/><circle cx="873" cy="40" r="7"/><circle cx="1160" cy="40" r="7"/></g>
+<g font-size="15" fill="#2C2B27" text-anchor="middle"><text x="300" y="74">Receive</text><text x="586" y="74">Review</text><text x="873" y="74">Decide</text><text x="1160" y="74">Complete</text></g>
+<text class="m" x="0" y="140" font-size="12" fill="#3B5BFF">ON SCREEN</text>
+<g font-size="15" fill="#6B6A66"><text x="0" y="185">Email</text><text x="0" y="240">Document portal</text><text x="0" y="295">Spreadsheet</text><text x="0" y="350">Core system</text></g>
+<g stroke="#E8E8E6" stroke-dasharray="3 6"><path d="M250 180H1180M250 235H1180M250 290H1180M250 345H1180"/></g>
+<path class="draw" d="M300 180L380 235L460 290L540 180L620 235L700 345L780 290L860 180L940 235L1020 345L1100 290L1160 345" fill="none" stroke="#3B5BFF" stroke-width="2.5" stroke-linejoin="round"/>
+<g class="pop" fill="#3B5BFF"><circle cx="300" cy="180" r="5"/><circle cx="380" cy="235" r="5"/><circle cx="460" cy="290" r="5"/><circle cx="540" cy="180" r="5"/><circle cx="620" cy="235" r="5"/><circle cx="700" cy="345" r="5"/><circle cx="780" cy="290" r="5"/><circle cx="860" cy="180" r="5"/><circle cx="940" cy="235" r="5"/><circle cx="1020" cy="345" r="5"/><circle cx="1100" cy="290" r="5"/><circle cx="1160" cy="345" r="5"/></g>
+<g class="pop tag m" font-size="11"><rect x="418" y="300" width="84" height="22" rx="4" fill="#E7ECFF"/><text x="428" y="315" fill="#3B5BFF">MANUAL</text>
+<rect x="500" y="146" width="88" height="22" rx="4" fill="#E7ECFF"/><text x="510" y="161" fill="#3B5BFF">HANDOFF</text>
+<rect x="732" y="300" width="100" height="22" rx="4" fill="#FDECEA"/><text x="742" y="315" fill="#C0392B">EXCEPTION</text>
+<rect x="896" y="200" width="86" height="22" rx="4" fill="#E7ECFF"/><text x="906" y="215" fill="#3B5BFF">REPEAT</text></g>
+</svg></div>
+</section>
+
+<section class="dark">
+<h2 class="rise">From scoped screens<br><em>to a map people confirm.</em></h2>
+<div class="stack rise d1">
+<ol><li><i>01</i><b>Capture</b><span>Permissioned, scoped desktop capture</span></li>
+<li><i>02</i><b>Understand</b><span>Sequence across apps, manual steps, handoffs, exceptions</span></li>
+<li><i>03</i><b>Validate &amp; use</b><span>Maps, documentation, automation opportunities, reviewed by people</span></li></ol>
+<div class="iso" aria-hidden="true">
+<div class="pl"><div class="w"><span style="background:#0F6CBD">Email</span></div><div class="w"></div><div class="w"><span style="background:#1D7A45">Sheet</span></div><div class="w"><span style="background:#6D4AC9">Core</span></div><div class="w"></div><div class="w"><span style="background:#E5813A">Portal</span></div></div>
+<div class="pl" id="tiles"></div>
+<div class="pl"><div class="o" style="background-image:url(./assets/views/board.jpg)"></div><div class="o" style="background-image:url(./assets/views/board.jpg);background-position:right"></div></div>
+<span class="ok" style="right:2%;top:30%">Cross-app · handoff</span><span class="ok" style="right:6%;top:46%;color:#FFB4A8">Exception</span><span class="ok" style="right:4%;top:80%">Map · validated</span>
+</div></div>
+<div class="note rise d2">Illustrative · fictional demo data</div>
+</section>
+
+<section>
+<div class="eb rise">What is technically distinctive</div>
+<h2 class="rise d1">Others see a slice.<br><em>Silow sees the sequence.</em></h2>
+<div class="lbl rise d2">[ The same piece of work, seen three ways · illustrative ]</div>
+<div class="sl rise d2" id="sl"></div>
+<div class="pills rise d3"><span>Cross-app sequence</span><span>Manual steps</span><span>Handoffs</span><span>Exceptions</span><span>Human validation</span></div>
+</section>
+
+<section>
+<div class="eb rise">One illustration</div>
+<h2 class="rise d1">An underwriting packet, <em>step by step.</em></h2>
+<div class="desk rise d2">
+<div class="col"><div class="wl"><i>1</i>Documents missing</div><div class="scr"><div class="win"><div class="wt"><i style="background:#0F6CBD">M</i>Mail — New submission</div><div class="wb"><h4>Submission checklist <small>Commercial property</small></h4>
+<div class="kr">Application form<span class="tg g">RECEIVED</span></div><div class="kr">Loss history<span class="tg x">MISSING</span></div><div class="kr">Schedule of values<span class="tg x">MISSING</span></div><div class="kr">Prior policy<span class="tg g">RECEIVED</span></div><div class="kr">Inspection report<span class="tg x">MISSING</span></div></div></div></div></div>
+<div class="col"><div class="wl"><i>2</i>Searched across apps</div><div class="scr"><div class="win"><div class="wt"><i style="background:#E5813A">P</i>Document portal — Search</div><div class="wb"><h4>“loss history” <small>3 places</small></h4>
+<div class="kr">Document portal<span class="tg">NOT FOUND</span></div><div class="kr">Shared drive · broker uploads<span class="tg g">FOUND</span></div><div class="kr">Email thread with broker<span class="tg">REQUEST SENT</span></div><div class="kr">Packet folder<span class="tg">COPIED IN</span></div><div class="kr">Inspection report<span class="tg x">STILL OPEN</span></div></div></div></div></div>
+<div class="col tk"><div class="wl"><i style="background:var(--ac)">3</i>Mapped by Silow</div><div class="scr"><div class="win"><div class="wt"><i style="background:#3B5BFF">S</i>Silow — Underwriting packet</div><div class="wb"><h4>Mapped steps <small>for review</small></h4>
+<div class="kr">Check against checklist<span class="tg">MANUAL</span></div><div class="kr">Search portal, drive, email<span class="tg">CROSS-APP</span></div><div class="kr">Assemble the packet<span class="tg">MANUAL</span></div>
+<div class="out a"><small>Candidate to automate</small>Find, request and assemble documents</div><div class="out p"><small>Stays with a person</small>Unresolved exceptions</div></div></div></div></div>
+</div>
+<p class="foot rise d3">Illustrative scenario with fictional data. <b>Not a measured result or a deployment.</b></p>
+</section>
+
+<section>
+<div class="ev">
+<div><div class="eb rise">Evidenced today</div>
+<h2 class="rise d1">A working product <em>and a partner in insurance.</em></h2>
+<ul class="rise d2"><li><i>Product</i>Capture, cross-app maps, documentation and automation opportunities people validate.</li>
+<li><i>Partner</i>Symfa is Silow’s strategic partner in insurance.</li>
+<li><i>Demo</i>A joint enterprise demo, held with Symfa.</li>
+<li class="no"><i>Not yet</i>Proven at scale. Scope and delivery can be partner-led.</li></ul></div>
+<div class="shot rise d3" role="img" aria-label="Silow process map screen with fictional demo data"><span class="badge">Product screen · fictional demo data</span></div>
+</div>
+</section>
+
+<section>
+<div class="eb rise">Distribution upside</div>
+<h2 class="rise d1">Silow travels with<br><em>the teams that implement.</em></h2>
+<div class="lbl rise d2">[ Who brings Silow into companies ]</div>
+<div class="gk rise d2">
+<div class="tk"><b>Forward-deployed engineering teams</b><p>Ground discovery in how the work really runs, before building inside a customer.</p><svg viewBox="0 0 240 150"><rect x="30" y="20" width="120" height="80" rx="4"/><path class="a" d="M46 80l24-22 20 14 34-34"/><circle cx="182" cy="96" r="14" class="a"/><path d="M164 140c0-14 8-22 18-22s18 8 18 22"/></svg><span class="pill on">Discovery</span></div>
+<div><b>Outsourcing providers</b><p>Scope a transition from the real sequence, handoffs and exceptions.</p><svg viewBox="0 0 240 150"><rect x="20" y="40" width="70" height="60" rx="4"/><rect x="150" y="40" width="70" height="60" rx="4"/><path class="a" d="M96 70h48M136 62l8 8-8 8" stroke-dasharray="4 4"/><path d="M32 58h46M32 70h30M162 58h46M162 70h30"/></svg><span class="pill">Scoping</span></div>
+<div><b>Agencies</b><p>Win better qualified implementation work, backed by a map the client’s people confirmed.</p><svg viewBox="0 0 240 150"><rect x="60" y="14" width="120" height="110" rx="4"/><path d="M78 40h84M78 60h60M78 80h72"/><path class="a" d="M80 102l10 10 22-24"/></svg><span class="pill">Qualified work</span></div>
+</div>
+<p class="foot rise d3">Each delivery team carries Silow into many companies. <b>That is the channel a strategic investor can open.</b></p>
+</section>
+
+<section>
+<div class="eb rise">How it reaches customers</div>
+<h2 class="rise d1">Partner-led by design. <em>Silow grounds the work.</em></h2>
+<div class="tl rise d2">
+<div></div><div class="hd">Discover</div><div class="hd">Validate</div><div class="hd">Scope</div><div class="hd">Deliver</div>
+<div class="lb">Silow<small>Technology</small></div><div class="bar w" style="grid-column:2/4" data-p="Discover · Validate">Scoped capture → maps and documentation</div><div></div><div></div>
+<div class="lb">The company’s people<small>Owners of the work</small></div><div></div><div class="bar g" data-p="Validate">Confirm the map</div><div></div><div></div>
+<div class="lb">Delivery partner<small>e.g. Symfa in insurance</small></div><div></div><div></div><div class="bar a" data-p="Scope">Scope from evidence</div><div class="bar k" data-p="Deliver">Implement</div>
+</div>
+<p class="foot rise d3">The model we are building with Symfa in insurance. <b>Proposed and demonstrated, not yet run at scale.</b></p>
+</section>
+
+<section>
+<div class="eb rise">The ask</div>
+<h2 class="rise d1">Strategic investment,<br><em>plus the doors to use it.</em></h2>
+<div class="dep rise d2">
+<div><i>01 · Investment</i><b>Strategic capital</b><p>To build Silow out as the discovery layer that delivery teams rely on.</p></div>
+<div><i>02 · Access</i><b>Customers and introductions</b><p>To forward-deployed engineering teams, outsourcing providers and agencies.</p></div></div>
+<div class="next rise d3"><span>Next step</span>A working session, then one client engagement we scope together.</div>
+<div class="site rise d3">silow.ai</div>
+</section>
+</main>
+<script>
+(function(){
+const T=document.getElementById('tiles');let h='';const on=[2,9,12,19,21,28,30];for(let i=0;i<32;i++)h+='<div class="t'+(on.includes(i)?' on':'')+'"></div>';T.innerHTML=h;
+const S=[['Open request','Email'],['Check documents','Portal','Manual'],['Search drive','Drive','Cross-app'],['Ask a colleague','Chat','Handoff'],['Copy figures','Sheet','Manual'],['Enter in system','Core'],['Missing input','Email','Exception'],['Re-check & fix','Core','Manual'],['Close & notify','Core']];
+const R=[['Interviews &amp; workshops','What people remember to mention',[0,5,8],'v'],['System logs','What one system records',[5,7,8],'s'],['Silow','What happened on screen, across apps, then confirmed by people',null,'y']];
+let o='';R.forEach(r=>{o+='<div class="r"><b>'+r[0]+'</b><span>'+r[1]+'</span></div>';S.forEach((s,i)=>{const seen=!r[2]||r[2].includes(i);const cls=seen?r[3]+(r[3]=='y'&&s[2]?' k':''):'';o+='<div class="c '+cls+'" style="--i:'+i+'"><span>'+(seen?s[0]:'—')+'</span><small>'+(r[3]=='y'&&s[2]?s[2]:(seen?s[1]:''))+'</small></div>'})});document.getElementById('sl').innerHTML=o;
+})();
+const deck=document.getElementById('deck'),slides=[...deck.children],counter=document.getElementById('counter'),top_=document.getElementById('topbar');
+if(!navigator.webdriver&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim');
+const show=s=>s.classList.add('in');
+new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&show(e.target)),{root:deck,threshold:.15}).observe&&slides.forEach(s=>new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&show(e.target)),{root:deck,threshold:.15}).observe(s));
+const cur=()=>{const y=deck.scrollTop+deck.clientHeight*.4;let i=0;slides.forEach((s,k)=>{if(s.offsetTop<=y)i=k});return i};
+function sync(){const i=cur();show(slides[i]);counter.textContent=String(i+1).padStart(2,'0');const d=slides[i].classList.contains('dark');top_.classList.toggle('dk',d);counter.style.color=d?'rgba(255,255,255,.5)':''}
+deck.addEventListener('scroll',sync,{passive:true});sync();
+const go=i=>deck.scrollTo({top:slides[Math.max(0,Math.min(i,slides.length-1))].offsetTop,behavior:'smooth'});
+addEventListener('keydown',e=>{const i=cur();if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(i+1)}if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(i-1)}if(e.key=='Home')go(0);if(e.key=='End')go(slides.length-1)});
+</script>
+<script type="module">
+try{const m=await import('./assets/datastream.js');m.initDataStream(document.getElementById('stream-canvas'),['./assets/desk-mac-1.jpg','./assets/desk-win-1.jpg','./assets/desk-mac-2.jpg','./assets/desk-win-2.jpg'])}catch(e){}
+</script>
+</body></html>
